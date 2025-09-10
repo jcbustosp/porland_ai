@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "toolfront-agent"
+version = "0.1.0"
+description = ""
+authors = ["Juan BUSTOS <juan-camilo.bustospelaez@bivwak.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+toolfront = {extras = ["trino"], version = "^0.2.11"}
+trino = "^0.336.0"
+pydantic-ai = "^1.0.2"
+streamlit = "^1.49.1"
+lz4 = "^4.4.4"
+logfire = "^4.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
