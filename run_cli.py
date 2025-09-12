@@ -1,14 +1,14 @@
 import asyncio
-
 from contextlib import AsyncExitStack
+
 from pydantic_ai.messages import (
     ModelResponse,
     TextPart,
 )
 
-from src.toolfront.db_agent import agent
+from src.portland_ai.agent import agent
 
-class DatabaseAgent():
+class PortlandAI():
     def __init__(self):
         self._exit_stack = AsyncExitStack()
         self.agent = agent
@@ -31,12 +31,11 @@ class DatabaseAgent():
                     break
 
                 try:
-                    async with agent.run_stream(user_input,
-                                     message_history=message_history
+                    async with agent.run_stream(user_input, 
+                                                message_history=message_history
                     ) as result:
-                        
+                
                         partial_text = ""
-
                         async for chunk in result.stream_text(delta=True):
                             partial_text += chunk
                             
@@ -60,5 +59,5 @@ class DatabaseAgent():
 
 
 if __name__ == "__main__":
-    app = DatabaseAgent()
+    app = PortlandAI()
     app.run()

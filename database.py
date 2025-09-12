@@ -1,12 +1,11 @@
 import os
 import dotenv
-
-from toolfront import Database
+from portland_ai import Database
 from trino.auth import OAuth2Authentication
 
 dotenv.load_dotenv(override=True)
 
-db = Database.from_trino(
+trino_db = Database.from_trino(
     user=os.getenv("USER"),
     host=os.getenv("TRINO_HOST"),
     port=os.getenv("TRINO_PORT"),

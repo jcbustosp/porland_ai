@@ -1,18 +1,21 @@
-import asyncio
-import json
 import os
+import json
+import asyncio
+
 import logfire
 import streamlit as st
 
 from dotenv import load_dotenv
+
 from pydantic_ai.messages import ModelRequest, ModelResponse, TextPart, UserPromptPart
 
-from db_agent import agent
+from src.portland_ai.agent import agent
 
 load_dotenv(override=True)
 
 logfire.configure()
 logfire.instrument_pydantic_ai()
+
 
 def display_message_part(part):
     """
@@ -108,7 +111,6 @@ async def run_agent_with_streaming(user_input: str):
 
 
 async def main():
-    # st.logo(image="./images/portland.png", size="large")
     st.title("Portland AI")
     st.write("Your business analyst assistant")
 
