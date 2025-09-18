@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 from pydantic_ai.messages import ModelRequest, ModelResponse, TextPart, UserPromptPart
 
-from src.portland_ai.agent import agent
+from agent import agent
 
 load_dotenv(override=True)
 

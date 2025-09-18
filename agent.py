@@ -51,7 +51,8 @@ agent = Agent(
     model=get_model(os.getenv("MODEL_ROOT_AGENT")),
     system_prompt=format_text(
         ROOT_AGENT_INSTRUCTION_PROMPT.format(
-            CLIENT_NAME=os.getenv("CLIENT_NAME"), CURRENT_DATE=datetime.date.today()
+            CLIENT_NAME=os.getenv("CLIENT_NAME"), 
+            CURRENT_DATE=datetime.date.today()
         )
     ),
     history_processors=[keep_recent_messages],
