@@ -22,8 +22,8 @@ QUESTIONS = {
                "What factors contributed to the decline in the total order GTV level during March 2025 compared with the level observed in February 2025? Analyze order activity of franchisees by country.", # Significant franchisees closed during March 25 in France (Ramadan month)
                # Overlay GTV trends with consumer confidence data (especially for the 18–30-year-old demographic) over time. Is there a statistically significant correlation between declining consumer confidence and the recent slowdown in GTV?"
     ],
-    "patient21": ["What are the main drivers behind the high daily liquidity outflows observed during June 2025? List the large-impact transactions that explain significant outflows.",
-                  "What is the average monthly change in total cash position, based on end-of-month total liquidity balances, during the 6 months before March 2025?",
+    "patient21": ["What are the main drivers behind the high daily liquidity outflows observed during the last two days of June 2025? Look at large-impact negative transactions to explain the outflows.",
+                  "What is the average variation in end-of-month total liquidity balances during the six-month period before March 2025 ?",
                   "What is the change in the trend of transaction outflows from March to May 2025 compared to December 2024 to February 2025 for the client headquarters accounts (i.e., the 'patient21_se' legal entity)?"],
 }
 

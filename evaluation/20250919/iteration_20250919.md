@@ -54,22 +54,30 @@ To ensure our evaluations were comparable, we used the same LLM (`gpt-oss:20b`) 
 
 The table below sums up the iteration results over `taster` and `patient21`.
 
-All results are available [here](/Users/juan-camilo.bustospelaez/projects-perso/portland-analyst/src/portland_ai/evaluation/20250919/assessment_results.md).
+All results are available [here](/Users/juan-camilo.bustospelaez/projects-perso/portland-analyst/src/portland_ai/evaluation/20250919/evaluation_results_20250919.md).
+
+| Question                                                                                                                                                                                                                     | Client     | No context | Context | Agent + Context |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|------------|---------|-----------------|
+| Does the monthly total order GTV of the top 25 franchisees show signs of plateauing (i.e., flattening or slowing growth) during the six months preceding September 2023?                                                   | Taster     | 0          | 0       | 0               |
+| For the six months before September 2023, what were the quartile values of monthly total order GTV values among the top 25 franchisees each month?                                                                         | Taster     | 1          | 1       | 1               |
+| How many distinct franchisees had a total monthly order GTV below €20,000 from November 2023 to April 2024?                                                                                                                  | Taster     | 1          | 1       | 0               |
+| Among the franchisees that churned (had no orders for 42 consecutive days) before June 2024, how many never reached a monthly total order GTV level above €20,000 at any time before churn?                                | Taster     | 0          | 0       | 0               |
+| What factors contributed to the decline in the total order GTV level during March 2025 compared with the level observed in February 2025? Analyze order activity of franchisees by country.                                | Taster     | 0          | 0       | 1              |
+| What are the main drivers behind the high daily liquidity outflows observed during the last two days of June 2025? Look at large-impact negative transactions to explain the outflows.                                     | Patient21  | 0          | 0       | 1               |
+| What is the average variation in end-of-month total liquidity balances during the six-month period before March 2025?                                                                                                       | Patient21  | 0          | 0       | 1               |
+| What is the change in the trend of transaction outflows from March to May 2025 compared to December 2024 to February 2025 for the client headquarters accounts (i.e., the ‘patient21_se’ legal entity)?                    | Patient21  | 0          | 1       | 1               |
 
 ### Key insights
 
 - The quality of the results is directly tied to the quality of its input. A correct definition of system's instructions and context actively shape the AI’s responses, enabling to obtain more accurate, efficient and reliable answers. Context acts as a guide, enabling you to fine-tune the AI's behavior by setting defaults, steering it to the right data, and clarifying relationships between datasets.
+        Semantics - knowledge of what each field, table or entity means
+        Lineage - how data flows and where dependencies exist
+        Usage patterns - how teams consume and interpret data
+        Constraints & rules - what mus always hold true
 
 - An agent-based system acts as a powerful layer on top of basic tools. By managing conversational memory and multi-turn interactions, an agent allows a system to handle more complex, multi-step user queries, going far beyond a simple single-shot lookup.
 
 - AI based system development moves quickly, with many tools but no standard way to measure success. You need to set clear goals, choose what to track, and recognize that building a system is one task, while proving it works is another.
-
-## Context
-
-Semantics - knowledge of what each field, table or entity means
-Lineage - how data flows and where dependencies exist
-Usage patterns - how teams consume and interpret data
-Constraints & rules - what mus always hold true
 
 ## Next Steps
 
